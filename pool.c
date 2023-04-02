@@ -4,6 +4,9 @@ int main()
 {
     wait_for_light(2);
     shut_down_in(115);
+	
+    msleep(5000); //delay for icreate to start
+	
     cmpc(3); 
     enable_servo(1);
     enable_servo(2);
@@ -12,8 +15,8 @@ int main()
    
         while (gmpc(3)<1720) // goes forward a bit 
         {
-            motor(0,80);
-            motor(3,80);
+            motor(0,100);
+            motor(3,100);
         }
     ao();
     msleep(1000); // pause for a bit
@@ -86,7 +89,7 @@ int main()
             
             msleep(100);
             motor(0, 50);
-            motor(3, 50);
+            motor(3, 50); // placeholder code for a line follower
             
           }
         else
