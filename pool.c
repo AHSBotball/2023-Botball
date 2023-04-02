@@ -63,9 +63,11 @@ int main()
             ao();
             
             //get the poms GET THE POMS POOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOMS
+		
+	    ////VERY VERY VERY VERY UNFISHED AND NEEDS FURTHER TESTING AND PROGRAMMING
             if(analog(1) > 3600)
             {
-                msleep(500); //move for a little bit to get centered on the line
+                msleep(500); //move for a little bit to get the sensor centered on the line
                 ao(); //stop moving
             }
             else
