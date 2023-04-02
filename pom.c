@@ -16,7 +16,6 @@ int main()
             {
                 while(analog(1) < 3900)
                 {
-                    printf("blind");
                     motor(0, 50);
                     motor(3, 50);
                 }
@@ -26,10 +25,9 @@ int main()
                 printf("LINE");
                 ao();
                 
-   				clear_motor_position_counter(0);
-    			clear_motor_position_counter(3);
+   				cmpc(0);
     
-   				while(get_motor_position_counter(0) > -850)
+   				while(gmpc(0) > -850)
     			{
         			motor(0, -100);
         			motor(3, 100);
@@ -40,7 +38,7 @@ int main()
                 
                 motor(0, 72);
                 motor(3, 70);
-                msleep(7000);
+                msleep(7000); // THIS IS A PLACEHOLDER USED FOR TEST RUNS IT WILL BE REMOVED AND REPLACED WITH A LINE FOLLOWER
                 ao();
                 return 0;                
             }
